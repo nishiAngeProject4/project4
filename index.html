@@ -7,6 +7,35 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <!-- test -->
+
+<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
+    crossorigin='anonymous'></script>
+<script>
+         $.ajax({
+                url: 'https://proxy.hackeryou.com',
+                method: 'GET',
+                dataType: 'json',
+                data: {
+                    reqUrl: 'http://api.indeed.com/ads/apisearch',
+                    params: {
+                        publisher: "2117056629901044",
+                        v: 2,
+                        format: 'json',
+                        q: 'developer',
+                        location: 'toronto',
+                        co: 'ca',
+                        limit: '10',
+                        pageNumber: '10',
+                        highlight: 1
+                    }
+                }
+            }).then((res) => {
+                console.log(res);
+            });
+
+    </script>
 </body>
 </html>
+
+ 
