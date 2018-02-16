@@ -162,11 +162,30 @@ header h1 {
   font-size: 50px;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Roboto Mono", monospace; }
+  font-family: "Roboto Mono", monospace;
+  color: #2e66eb; }
 
 header form {
   text-align: center;
   font-size: 40px; }
+
+header label {
+  color: #ee6f2e; }
+
+header p {
+  color: #ee6f2e;
+  font-size: 16px;
+  margin: 0; }
+
+header input {
+  border: 1px solid #62574e;
+  font-size: 24px;
+  padding: 10px 20px; }
+
+header button {
+  background: #2e66eb;
+  border: 1px;
+  padding: 15px 20px; }
 
 html {
   font-size: 62.5%;

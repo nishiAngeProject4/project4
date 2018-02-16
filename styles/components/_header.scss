@@ -1,12 +1,35 @@
-header h1{
+header{
+    h1{
     font-size: 50px;
     text-align: center;
     text-transform: uppercase;
     font-family: $baseFont;
+    color: $secondColor;
 }
-
-header form{
+    form{
     text-align: center;
     font-size: 40px;
+}
+    label{
+        color: $thirdColor;
+    }
+
+    p{
+        color: $thirdColor;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    input{
+        border: 1px solid $primaryColor;
+        font-size: 24px;
+        padding: 10px 20px;
+    }
+
+    button{
+        background: $secondColor;
+        border: 1px;
+        padding: 15px 20px;
+    }
 }
 
