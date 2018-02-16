@@ -1,41 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body>
-    <!-- test -->
-
-<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
-    crossorigin='anonymous'></script>
-<script>
-         $.ajax({
-                url: 'https://proxy.hackeryou.com',
-                method: 'GET',
-                dataType: 'json',
-                data: {
-                    reqUrl: 'http://api.indeed.com/ads/apisearch',
-                    params: {
-                        publisher: "2117056629901044",
-                        v: 2,
-                        format: 'json',
-                        q: 'developer',
-                        location: 'toronto',
-                        co: 'ca',
-                        limit: '10',
-                        pageNumber: '10',
-                        highlight: 1
-                    }
-                }
-            }).then((res) => {
-                console.log(res);
-            });
-
-    </script>
+    <header>
+        <h1>Create your bad cover letter</h1>
+        <form>
+            <div>
+                <label for="jobsearch">Search for a job: </label>
+                <input type="search" id="jobsearch" name="name" placeholder="Search for a job">
+            </div>
+            <div>
+                <button>Submit</button>
+            </div>
+        </form>
+    </header>
+    <div class="wrapper clearfix">
+        <!-- <h2 class="jobTitle"></h2>
+   <h3 class="jobCompany"></h3>
+   <p class="jobDescription"></p> -->
+    </div>
+    <section class="cvrLetter">
+        <div class="coverLetter wrapperLetter">
+            <h3>Dear
+                <span class="companyName">COMPANY</span> ,</h3>
+            <p>This email is in regards to my interest in applying for the
+                <span class="jobRole">POSITION</span> position recently posted through Indeed.com website.</p>
+            <p>While pursuing a degree from Soso College, I got skillzzz that would blow your mind away. I have been recognized
+                for my outstanding
+                <span class="ability">ABILITY</span> to work as part of a team. It is for this reason I have
+                <span class="antonymn">SUPPORT</span> in multiple team-oriented courses and projects and have consistently
+                <span class="rhyme">COMPROMISE</span> finished assignments as per requirements and always within the allotted time provided.</p>
+            <p>I have also been able to utilize my
+                <span class="rhymen">CONFIDENT</span> technical knowledge while volunteering in multiple capacities. It is with
+                <span class="antonymn">ENTHUSIASM</span> that I have been able to gain exposure to multiple technologies, platforms, and operating
+                languages through the course of my perpetual quest for knowledge.</p>
+            <p>I am sure after appraisal of my resume you will see I am an individual with excellent potential.</p>
+            <p>Yours sincerely,</p>
+        </div>
+    </section>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
+        crossorigin='anonymous'></script>
+    <script src="scripts/script.js"></script>
+    
 </body>
-</html>
 
- 
+</html>
