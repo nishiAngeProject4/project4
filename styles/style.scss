@@ -1,0 +1,26 @@
+$baseFont: 'Roboto Mono', monospace;
+$secondFont:'Titillium Web', sans-serif;
+
+
+@import "components/setup";
+@import "components/variable";
+@import "components/mediaquery";
+@import "components/main";
+@import "components/header";
+@import "components/footer";
+@import "components/mixin";
+
+html{
+    font-size: 62.5%;
+    font-family: $baseFont;
+}
+
+.wrapper{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.wrapperLetter{
+    max-width: 980px;
+    margin: 0 auto;
+}
