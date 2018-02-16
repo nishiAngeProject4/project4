@@ -1,6 +1,10 @@
 $baseFont: 'Roboto Mono', monospace;
 $secondFont:'Titillium Web', sans-serif;
 
+$primaryColor:  #62574e;
+$secondColor: #2e66eb;
+$thirdColor: #ee6f2e;
+
 
 @import "components/setup";
 @import "components/variable";
