@@ -8,6 +8,16 @@
 </head>
 <body>
 
+<!-- <form>
+    <div>
+        <label for="jobsearch">Search for a job: </label>
+        <input type="search" id="jobsearch" name="name"  placeholder="Search for a job">
+    </div>
+    <div>
+        <button>Submit</button>
+    </div>
+</form> -->
+
     <div class = "wrapper">
         <!-- <h2 class="jobTitle"></h2>
         <h3 class="jobCompany"></h3>
@@ -17,91 +27,24 @@
 
 <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
     crossorigin='anonymous'></script>
-<script>
+<script src ="scripts/script.js">
 
- const jobApp = {};
-       jobApp.getJobListing = () => {  
-                  $.ajax({
-               url: 'https://proxy.hackeryou.com',
-               method: 'GET',
-               dataType: 'json',
-               data: {
-                   reqUrl: 'http://api.indeed.com/ads/apisearch',
-                   params: {
-                       publisher: "2117056629901044",
-                       v: 2,
-                       format: 'json',
-                       q: 'developer',
-                       location: 'toronto',
-                       co: 'ca',
-                       limit: '5',
-                       pageNumber: '1'
-                   }
-               }
-           }).then((res) => {
-                   const jobListings = res.results;
-                   jobApp.displayJobListings(jobListings);
-                   
-           })
-        };
+$(function () {
+    jobApp.init();
 
-    jobApp.displayJobListings = (jobListings) => {
-
-     const job = jobListings;
-
-        job.forEach((item) => {
- 
-            $('.wrapper').append(`
-            <div class="job">
-                <h2>${item.jobtitle}</h2>
-                <h3>${item.company}</h3>
-                <p>${item.snippet}</p>
-                <button class="jobbtn">Click me</button>
-            </div>`);
-
-        });
-}; 
-
-jobApp.getJobTitle = (x) => {
-    let text = $(x).siblings('h2').text();
-    console.log(text);
-    text = text.replace(/\s/g, "%20");
-    console.log(text);
-    jobApp.jobTitleNormalize(text);
-
-};
-
-jobApp.jobTitleNormalize = (text) => {
-    $.ajax({
-        url: `http://api.dataatwork.org/v1/jobs/normalize?job_title=${text}`,
-        dataType: "json",
-        method: "GET"
-    }).then((res) => {
-        console.log(res);
-    });  
-};
-
-jobApp.init = () => {
-    jobApp.getJobListing();
-
-    };
-       
-
-    $(function () {
-        jobApp.init();
-
-      $('div').on('click', ".jobbtn", function(e){
+    $("div").on("click", ".jobbtn", function (e) {
         jobApp.getJobTitle(this);
-        
+
         // var text = $(this).siblings('h2').text();
         // console.log(text);
-        });
-        
-
     });
+});
 
 
-    </script>
+
+</script>
+
+
 </body>
 </html>
 
