@@ -4,7 +4,12 @@ $secondFont:'Titillium Web', sans-serif;
 $primaryColor:  #62574e;
 $secondColor: #2e66eb;
 $thirdColor: #ee6f2e;
+$fourthColor: #d3d3d3;
 
+$bigFontSzie: 40px;
+$mediumFontSize: 22px;
+$regularFontSize: 20px;
+$smallFontSize: 16px;
 
 @import "components/setup";
 @import "components/variable";
@@ -24,7 +29,12 @@ html{
     margin: 0 auto;
 }
 
+.wrapperForm{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
 .wrapperLetter{
-    max-width: 980px;
+    max-width: 780px;
     margin: 0 auto;
 }

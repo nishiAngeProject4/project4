@@ -1,29 +1,97 @@
-.job{
-    float: left;
-    width: calc(33.33% - 10px);
-    margin: 5px;
-}
+main{
+    font-family: $baseFont;
+    margin-top: 100px;
 
-.job h2{
-    font-size: 28px;
-}
+    .job{
+        float: left;
+        width: calc(33.33% - 20px);
+        text-align: center;
+        padding: 40px 15px;
+        background: $fourthColor;
+        margin: 10px;
+        
+    }
+    
+    .job h2{
+        font-size: $mediumFontSize;
+        color: $thirdColor;
+          
+    }
+    
+    .job h3{
+        font-size: $mediumFontSize;
+        color: $secondColor;
+        margin-top: 50px; 
+    }
+    
+    .job p{
+        font-size: $smallFontSize;
+        color: $primaryColor;
+        margin-top: 50px; 
+    }
+    
+    .jobbtn {
+        font-size: $smallFontSize;
+        margin-top: 60px; 
+        padding: 10px 45px;
+        background: $secondColor;
+        color: #ffff;
+        border: 1px solid $secondColor;
+    }
+    // form styling ======
+    form{
+        font-family: $baseFont;
+        margin: 0 auto;
+        color: $thirdColor;
+        background: $fourthColor;
+        display: flex;
+        flex-direction: column;
 
-.job h3{
-    font-size: 22px;
-}
+        .wordSkillcontainer{
+            display: flex;
+        }
+    
+        p{
+            font-size: $bigFontSzie;
+            text-align: center;
+        }
+        
+        label{
+            font-size: $regularFontSize;
+        }
+    }
+    // cover letter styling =====
+    .coverLetter{
+        border: 1px solid #888888;
+        padding: 40px 75px;
+        line-height: 1.6;
+        margin-top: 75px;
+        box-shadow: 10px 10px 10px #888888;
+        font-family: $secondFont;
+    }
+    .coverLetter h3{
+        font-size: 26px;
+        
+    }
+    
+    .coverLetter p{
+        font-size: 18px;
+    }
 
-.job p{
-    font-size: 18px;
-}
+    span{
+        color: $secondColor;
+    }
+    // Create Again Button Style ===
+    .againButton{
+        margin: 0 auto;
+    }
+    .againButton button {
+        background: $secondColor;
+        color: #ffff;
+        font-size: 25px;
+        border: 1px;
+        padding: 16px 65px;
+       margin-top: 100px;
+    }
 
-.jobbtn {
-    font-size: 20px;
-}
-// cover letter styling =====
-.coverLetter h3{
-    font-size: 26px;
-}
-
-.coverLetter p{
-    font-size: 18px;
 }
