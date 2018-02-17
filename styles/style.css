@@ -165,28 +165,56 @@ main {
     border: 1px solid #2e66eb; }
   main form {
     font-family: "Roboto Mono", monospace;
-    margin: 0 auto;
     color: #ee6f2e;
-    background: #d3d3d3;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; }
-    main form .wordSkillcontainer {
+    background: #d3d3d3; }
+    main form .wordSkillContainer {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; }
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+    main form .wordSkillBox {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+    main form .wordBox {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 30px; }
+    main form .submitButton {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      padding-bottom: 100px; }
+    main form input[type="checkbox"] {
+      height: 33px;
+      width: 31px; }
     main form p {
       font-size: 40px;
-      text-align: center; }
+      text-align: center;
+      padding-top: 100px; }
     main form label {
-      font-size: 20px; }
+      font-size: 20px;
+      color: #62574e; }
+    main form input[type="submit"] {
+      background: #2e66eb;
+      color: #ffff;
+      font-size: 25px;
+      border: 1px;
+      padding: 16px 65px;
+      margin-top: 100px; }
   main .coverLetter {
     border: 1px solid #888888;
-    padding: 40px 75px;
+    padding: 50px 75px;
     line-height: 1.6;
     margin-top: 75px;
     -webkit-box-shadow: 10px 10px 10px #888888;
@@ -197,9 +225,8 @@ main {
   main .coverLetter p {
     font-size: 18px; }
   main span {
-    color: #2e66eb; }
-  main .againButton {
-    margin: 0 auto; }
+    color: #2e66eb;
+    font-size: 18px; }
   main .againButton button {
     background: #2e66eb;
     color: #ffff;

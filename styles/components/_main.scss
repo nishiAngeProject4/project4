@@ -9,7 +9,6 @@ main{
         padding: 40px 15px;
         background: $fourthColor;
         margin: 10px;
-        
     }
     
     .job h2{
@@ -41,29 +40,60 @@ main{
     // form styling ======
     form{
         font-family: $baseFont;
-        margin: 0 auto;
+        // margin: 0 auto;
         color: $thirdColor;
         background: $fourthColor;
-        display: flex;
-        flex-direction: column;
 
-        .wordSkillcontainer{
+        .wordSkillContainer{
             display: flex;
+            flex-direction: column;
+        }
+        
+        .wordSkillBox{
+            display: flex;
+            justify-content: center;
+        }
+
+        .wordBox{
+            display: flex;
+            padding: 30px;
+        }
+
+        .submitButton{
+            display: flex;
+            justify-content: center;
+            padding-bottom: 100px;
+        }
+
+        input[type="checkbox"]{
+            height: 33px;
+            width: 31px;
         }
     
         p{
             font-size: $bigFontSzie;
             text-align: center;
+            padding-top: 100px;
         }
         
         label{
             font-size: $regularFontSize;
+            color: $primaryColor;
+        }
+
+        input[type="submit"]{
+            background: $secondColor;
+            color: #ffff;
+            font-size: 25px;
+            border: 1px;
+            padding: 16px 65px;
+            margin-top: 100px;
         }
     }
     // cover letter styling =====
     .coverLetter{
         border: 1px solid #888888;
-        padding: 40px 75px;
+        padding: 50px 75px;
         line-height: 1.6;
         margin-top: 75px;
         box-shadow: 10px 10px 10px #888888;
@@ -80,11 +110,10 @@ main{
 
     span{
         color: $secondColor;
+        font-size: 18px;
     }
     // Create Again Button Style ===
-    .againButton{
-        margin: 0 auto;
-    }
+    
     .againButton button {
         background: $secondColor;
         color: #ffff;
