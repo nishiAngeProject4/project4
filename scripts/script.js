@@ -31,7 +31,7 @@ jobApp.displayJobListings = jobListings => {
                <h2>${item.jobtitle}</h2>
                <h3>${item.company}</h3>
                <p>${item.snippet}</p>
-               <button class="jobbtn">Generate Cover Letter</button>
+               <button class="jobbtn">Create Cover Letter!</button>
            </div>`);
     });
 }; 
