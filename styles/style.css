@@ -135,57 +135,106 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 i {
   color: white; }
 
-.job {
-  float: left;
-  width: calc(33.33% - 10px);
-  margin: 5px; }
-
-.job h2 {
-  font-size: 28px; }
-
-.job h3 {
-  font-size: 22px; }
-
-.job p {
-  font-size: 18px; }
-
-.jobbtn {
-  font-size: 20px; }
-
-.coverLetter h3 {
-  font-size: 26px; }
-
-.coverLetter p {
-  font-size: 18px; }
-
-header h1 {
-  font-size: 50px;
-  text-align: center;
-  text-transform: uppercase;
+main {
   font-family: "Roboto Mono", monospace;
-  color: #2e66eb; }
+  margin-top: 100px; }
+  main .job {
+    float: left;
+    width: calc(33.33% - 20px);
+    text-align: center;
+    padding: 40px 15px;
+    background: #d3d3d3;
+    margin: 10px; }
+  main .job h2 {
+    font-size: 22px;
+    color: #ee6f2e; }
+  main .job h3 {
+    font-size: 22px;
+    color: #2e66eb;
+    margin-top: 50px; }
+  main .job p {
+    font-size: 16px;
+    color: #62574e;
+    margin-top: 50px; }
+  main .jobbtn {
+    font-size: 16px;
+    margin-top: 60px;
+    padding: 10px 45px;
+    background: #2e66eb;
+    color: #ffff;
+    border: 1px solid #2e66eb; }
+  main form {
+    font-family: "Roboto Mono", monospace;
+    margin: 0 auto;
+    color: #ee6f2e;
+    background: #d3d3d3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    main form .wordSkillcontainer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    main form p {
+      font-size: 40px;
+      text-align: center; }
+    main form label {
+      font-size: 20px; }
+  main .coverLetter {
+    border: 1px solid #888888;
+    padding: 40px 75px;
+    line-height: 1.6;
+    margin-top: 75px;
+    -webkit-box-shadow: 10px 10px 10px #888888;
+    box-shadow: 10px 10px 10px #888888;
+    font-family: "Titillium Web", sans-serif; }
+  main .coverLetter h3 {
+    font-size: 26px; }
+  main .coverLetter p {
+    font-size: 18px; }
+  main span {
+    color: #2e66eb; }
+  main .againButton {
+    margin: 0 auto; }
+  main .againButton button {
+    background: #2e66eb;
+    color: #ffff;
+    font-size: 25px;
+    border: 1px;
+    padding: 16px 65px;
+    margin-top: 100px; }
 
-header form {
-  text-align: center;
-  font-size: 40px; }
-
-header label {
-  color: #ee6f2e; }
-
-header p {
-  color: #ee6f2e;
-  font-size: 16px;
-  margin: 0; }
-
-header input {
-  border: 1px solid #62574e;
-  font-size: 24px;
-  padding: 10px 20px; }
-
-header button {
-  background: #2e66eb;
-  border: 1px;
-  padding: 15px 20px; }
+header {
+  font-family: "Roboto Mono", monospace; }
+  header h1 {
+    font-size: 55px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2e66eb; }
+  header form {
+    text-align: center;
+    font-size: 40px; }
+  header label {
+    color: #ee6f2e; }
+  header p {
+    color: #ee6f2e;
+    font-size: 16px;
+    margin: 0; }
+  header input {
+    border: 1px solid #62574e;
+    font-size: 25px;
+    padding: 10px 20px; }
+  header button {
+    background: #2e66eb;
+    color: #ffff;
+    font-size: 25px;
+    border: 1px;
+    padding: 16px 65px;
+    margin-top: 60px; }
 
 html {
   font-size: 62.5%;
@@ -195,6 +244,10 @@ html {
   max-width: 1170px;
   margin: 0 auto; }
 
+.wrapperForm {
+  max-width: 1170px;
+  margin: 0 auto; }
+
 .wrapperLetter {
-  max-width: 980px;
+  max-width: 780px;
   margin: 0 auto; }
