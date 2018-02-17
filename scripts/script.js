@@ -1,5 +1,6 @@
 const jobApp = {};
 
+
 jobApp.getJobListing = () => {
     $.ajax({
         url: "https://proxy.hackeryou.com",
@@ -77,19 +78,7 @@ jobApp.coverLetterIntro = (x,y) => {
     $(".jobRole").text(y);    
 };
 
-//////////
-
-jobApp.replaceAntonymn1 = () => {
-  $.ajax({
-    url: "https://api.datamuse.com/words?rel_ant=ability",
-    method: "GET",
-    dataType: "json"
-  }).then(res => {
-    console.log(res);
-  });
-};
-
-jobApp.abilty = ['eager','friendly','support','respect','fit'];
+jobApp.abilty = ["eager", "friendly", "support", "respect", "fit"];
 
 jobApp.randomAbilty = optionsArray => {
   const index = Math.floor(Math.random() * optionsArray.length);
@@ -97,49 +86,72 @@ jobApp.randomAbilty = optionsArray => {
   return optionsArray[index];
 };
 
-jobApp.randomAnt1 = optionsArray => {
-  const index = Math.floor(Math.random() * optionsArray.length);
-  return optionsArray[index];
-};
-jobApp.event = () => {
-  function getWordFromArray(array) {
-    const randomIndex = Math.floor(Math.random() * array.length);
-    return array[randomIndex];
-  }
-};
+//////////
 
-jobApp.replaceRelWord1 = () => {
+jobApp.replaceAntonymn = (query) => {
   $.ajax({
-    url: "https://api.datamuse.com/words?rel_ant=support",
+    url: `https://api.datamuse.com/words?rel_ant=${query}`,
     method: "GET",
     dataType: "json"
   }).then(res => {
-    console.log(res);
+    // console.log(res);
+    const anton = res; 
+    jobApp.randomAnt(anton);
+    jobApp.randomAnt2(anton);
+    jobApp.randomAnt3(anton);
   });
 };
 
-jobApp.replaceRhyme1 = () => {
+jobApp.randomAnt = (anton) => {
+  const index = Math.floor(Math.random() * anton.length);
+  console.log(anton[index].word);
+  $('.ability').text(anton[index].word);
+};
+
+jobApp.randomAnt2 = anton => {
+  const index = Math.floor(Math.random() * anton.length);
+  console.log(anton[index].word);
+  $(".antonymn").text(anton[index].word);
+};
+
+jobApp.randomAnt3 = anton => {
+  const index = Math.floor(Math.random() * anton.length);
+  console.log(anton[index].word);
+  $(".antonymn2").text(anton[index].word);
+};
+
+
+
+jobApp.replaceRhyme = (query) => {
   $.ajax({
-    url: "https://api.datamuse.com/words?rel_rhy=confident",
+    url: `https://api.datamuse.com/words?rel_rhy=${query}`,
     method: "GET",
     dataType: "json"
   }).then(res => {
-    console.log(res);
+    const rhyme = res;
+    jobApp.randomRhyme(rhyme);
+    jobApp.randomRhyme2(rhyme);
   });
 };
 
-jobApp.replaceRhyme2 = () => {
-  $.ajax({
-    url: "https://api.datamuse.com/words?rel_rhy=enthusiasm",
-    method: "GET",
-    dataType: "json"
-  }).then(res => {
-    console.log(res);
-  });
+
+
+jobApp.randomRhyme = (rhyme) => {
+  const index = Math.floor(Math.random() * rhyme.length);
+  console.log(rhyme[index].word);
+  $('.rhyme').text(rhyme[index].word);
+};
+
+jobApp.randomRhyme2 = rhyme => {
+  const index = Math.floor(Math.random() * rhyme.length);
+  console.log(rhyme[index].word);
+  $(".rhymen").text(rhyme[index].word);
 };
 
 
 ///////
+
+
 
 jobApp.smoothScroll = () => {
 
@@ -165,9 +177,33 @@ jobApp.init = () => {
 }; 
 
 $(function () {
-    jobApp.init(); $("div").on("click", ".jobbtn", function (e) {
-        jobApp.getJobTitle(this); 
+    jobApp.init(); 
+    $("div").on("click", ".jobbtn", function (e) {
+    jobApp.getJobTitle(this); 
+});
+
+    $("input[type=checkbox]").on("change", function(e) {
+    if ($("input[type=checkbox]:checked").length > 5) {
+        $(this).prop("checked", false);
+        alert("allowed only 5");
+    }
     });
 
+    
+    $('form').on("submit", function(e){
+        e.preventDefault();
+        let searchIDs = $("input:checked").map(function() {
+          return $(this).val();
+        });
+        console.log(searchIDs.get());
+        console.log(searchIDs[1]);
+        jobApp.replaceAntonymn(searchIDs[0]);
+        jobApp.replaceAntonymn(searchIDs[1]);
+        jobApp.replaceRhyme(searchIDs[2]);
+        jobApp.replaceRhyme(searchIDs[3]);
+        jobApp.replaceAntonymn(searchIDs[4]);
+    });
+
+    
 
 });
