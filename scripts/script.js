@@ -156,11 +156,28 @@ jobApp.getJobuuid = uuid => {
             console.log(res.skills[i].description);
         }
     });
-}; 
+};
+
+jobApp.smoothScroll = () => {
+
+    $('a[href^="#"]').on('click', function (event) {
+    
+        var target = $(this.getAttribute('href'));
+    
+        if (target.length) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top
+            }, 1000);
+        }
+    
+    });
+}
 
 
 jobApp.init = () => {
     jobApp.getJobListing();
+    jobApp.smoothScroll();
 }; 
 
 $(function () {

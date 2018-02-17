@@ -86,6 +86,7 @@ $(function () {
 
 <body>
     <header>
+        <a href="#bottom" id="top"></a>
         <h1>Create your worst cover letter</h1>
         <form>
             <div>
@@ -98,30 +99,84 @@ $(function () {
             </div>
         </form>
     </header>
-    <div class="wrapper clearfix">
-        <!-- <h2 class="jobTitle"></h2>
-   <h3 class="jobCompany"></h3>
-   <p class="jobDescription"></p> -->
-    </div>
-    <section class="cvrLetter">
-        <div class="coverLetter wrapperLetter">
-            <h3>Dear
-                <span class="companyName">COMPANY</span> ,</h3>
-            <p>This email is in regards to my interest in applying for the
-                <span class="jobRole">POSITION</span> position recently posted through Indeed.com website.</p>
-            <p>While pursuing a degree from Soso College, I got skillzzz that would blow your mind away. I have been recognized
-                for my outstanding
-                <span class="ability">ABILITY</span> to work as part of a team. It is for this reason I have
-                <span class="antonymn">SUPPORT</span> in multiple team-oriented courses and projects and have consistently
-                <span class="rhyme">COMPROMISE</span> finished assignments as per requirements and always within the allotted time provided.</p>
-            <p>I have also been able to utilize my
-                <span class="rhymen">CONFIDENT</span> technical knowledge while volunteering in multiple capacities. It is with
-                <span class="antonymn">ENTHUSIASM</span> that I have been able to gain exposure to multiple technologies, platforms, and operating
-                languages through the course of my perpetual quest for knowledge.</p>
-            <p>I am sure after appraisal of my resume you will see I am an individual with excellent potential.</p>
-            <p>Yours sincerely,</p>
+
+
+    <main>
+
+<!-- <a href="#bottom" id="top">
+    Click to scroll down</a> -->
+
+
+
+
+        <!-- DYNAMIC JS ATTACHED TO BUTTON CONNECTED TO THIS DIV!!! -->
+        <div class="wrapper clearfix">
+            <!-- <h2 class="jobTitle"></h2>
+    <h3 class="jobCompany"></h3>
+    <p class="jobDescription"></p> -->
         </div>
-    </section>
+        <!-- SECTION THAT HAS QUESTIONAIRE -->
+       <form action="" id="wordSkill" class="skillForm wrapperForm">
+        <div class="wordSkillcontainer">
+            <p>What skills would best describe you?</p>
+            
+            <input type="checkbox" id="respect" name="respect" value="1" > <label for="respect">respect</label>
+
+            <input type="checkbox" id="respect" name="respect" value="2" >
+            <label for="respect">respect</label>
+
+            <input type="checkbox" id="respect" name="respect" value="3" >
+            <label for="respect">respect</label>
+
+            <input type="checkbox" id="respect" name="respect" value="4" >
+            <label for="respect">respect</label>
+
+            <input type="checkbox" id="respect" name="respect" value="5" >
+            <label for="respect">respect</label>
+            
+            <input type="checkbox" id="respect" name="respect" value="6">
+            <label for="respect">respect</label>
+            
+            <input type="checkbox" id="respect" name="respect" value="7">
+            <label for="respect">respect</label>
+            
+            <input type="checkbox" id="respect" name="respect" value="8">
+            <label for="respect">respect</label>
+            
+            <input type="checkbox" id="respect" name="respect" value="9">
+            <label for="respect">respect</label>
+            
+            <input type="checkbox" id="respect" name="respect" value="10">
+            <label for="respect">respect</label>
+        </div>
+       </form>
+        
+
+
+        <!-- SECTION THAT HAS THE COVER LETTER -->
+        <section class="cvrLetter">
+            <div class="coverLetter wrapperLetter">
+                <h3>Dear
+                    <span class="companyName">COMPANY</span> ,</h3>
+                <p>This email is in regards to my interest in applying for the
+                    <span class="jobRole">POSITION</span> position recently posted through Indeed.com website.</p>
+                <p>While pursuing a degree from Soso College, I got skillzzz that would blow your mind away. I have been recognized
+                    for my outstanding
+                    <span class="ability">ABILITY</span> to work as part of a team. It is for this reason I have
+                    <span class="antonymn">SUPPORT</span> in multiple team-oriented courses and projects and have consistently
+                    <span class="rhyme">COMPROMISE</span> finished assignments as per requirements and always within the allotted time provided.</p>
+                <p>I have also been able to utilize my
+                    <span class="rhymen">CONFIDENT</span> technical knowledge while volunteering in multiple capacities. It is with
+                    <span class="antonymn">ENTHUSIASM</span> that I have been able to gain exposure to multiple technologies, platforms, and operating
+                    languages through the course of my perpetual quest for knowledge.</p>
+                <p>I am sure after appraisal of my resume you will see I am an individual with excellent potential.</p>
+                <p>Yours sincerely,</p>
+            </div>
+        </section>
+        <section class="againButton wrapperLetter">
+            <a href="#top" id="bottom"><button>Create Again!</button></a>
+        </section>
+    </main>
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
         crossorigin='anonymous'></script>
     <script src="scripts/script.js"></script>
