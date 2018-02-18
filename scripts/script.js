@@ -1,7 +1,13 @@
 const jobApp = {};
 
+jobApp.jobSearch = () =>{
+    let search = $('input[type=search]').val();
+    jobApp.getJobListing(search);
+    $('.wrapper').html('');
+}
 
-jobApp.getJobListing = () => {
+
+jobApp.getJobListing = (search) => {
     $.ajax({
         url: "https://proxy.hackeryou.com",
         method: "GET",
@@ -12,7 +18,7 @@ jobApp.getJobListing = () => {
                 publisher: "2117056629901044",
                 v: 2,
                 format: "json",
-                q: "web developer",
+                q: search,
                 location: "toronto",
                 co: "ca",
                 limit: "3",
@@ -20,6 +26,9 @@ jobApp.getJobListing = () => {
             }
         }
     }).then(res => {
+
+        if (res.totalResults === 0) {
+          alert("search again");}
         const jobListings = res.results;
         jobApp.displayJobListings(jobListings);
     });
@@ -37,8 +46,7 @@ jobApp.displayJobListings = jobListings => {
     });
 }; 
 
-// jobApp.indeedTitle = null;
-// jobApp.indeedCompany = null;
+
 
 jobApp.getJobTitle = x => {
     let indeedTitle = $(x).siblings("h2").text();
@@ -78,9 +86,9 @@ jobApp.coverLetterIntro = (x,y) => {
     $(".jobRole").text(y);    
 };
 
-jobApp.abilty = ["eager", "friendly", "support", "respect", "fit"];
+jobApp.ability = ["eager", "friendly", "support", "respect", "fit"];
 
-jobApp.randomAbilty = optionsArray => {
+jobApp.randomAbility = optionsArray => {
   const index = Math.floor(Math.random() * optionsArray.length);
   console.log(optionsArray[index]);
   return optionsArray[index];
@@ -171,21 +179,27 @@ jobApp.smoothScroll = () => {
 
 
 jobApp.init = () => {
-    jobApp.getJobListing();
-    jobApp.randomAbilty(jobApp.abilty);
+    // jobApp.getJobListing();
+    // jobApp.randomAbilty(jobApp.abilty);
     jobApp.smoothScroll();
 }; 
 
 $(function () {
     jobApp.init(); 
-    $("div").on("click", ".jobbtn", function (e) {
+
+    $(".showJobs").on("click", function(e) {
+    e.preventDefault();
+    jobApp.jobSearch();
+    });    
+
+    $("div").on("click", ".jobbtn", function(e) {
     jobApp.getJobTitle(this); 
 });
 
     $("input[type=checkbox]").on("change", function(e) {
     if ($("input[type=checkbox]:checked").length > 5) {
         $(this).prop("checked", false);
-        alert("allowed only 5");
+        alert("Please only select 5 skills");
     }
     });
 
@@ -195,6 +209,7 @@ $(function () {
         let searchIDs = $("input:checked").map(function() {
           return $(this).val();
         });
+        $("input:checked").prop("checked", false);
         console.log(searchIDs.get());
         console.log(searchIDs[1]);
         jobApp.replaceAntonymn(searchIDs[0]);
