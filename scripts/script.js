@@ -221,15 +221,10 @@ jobApp.smoothScroll = () => {
     });
 }
 
-// jobApp.reset = () => {
-//     $("input[type=search]").reset();
-// }
-
-
 jobApp.init = () => {
-    // jobApp.getJobListing();
-    // jobApp.randomAbilty(jobApp.abilty);
     jobApp.smoothScroll();
+    $('.cvrLetter').hide();
+    $('.againButton').hide();
 }; 
 
 $(function () {
@@ -259,6 +254,8 @@ $(function () {
           return $(this).val();
         });
         $("input:checked").prop("checked", false);
+        $('.cvrLetter').show();
+        $('.againButton').show();
         console.log(searchIDs.get());
         console.log(searchIDs[1]);
         jobApp.replaceAntonymn(searchIDs[0]);
