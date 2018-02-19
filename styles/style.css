@@ -135,6 +135,39 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 i {
   color: white; }
 
+@media (max-width: 1170px) {
+  .jobContainer .job {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10px; }
+  .wrapperLetter {
+    width: 90%; }
+  main .againButton {
+    font-size: 16px;
+    text-align: center; }
+  address button.emailButton {
+    font-size: 16px;
+    text-align: center; } }
+
+@media (max-width: 830px) {
+  h1 {
+    font-size: 40px; } }
+
+@media (max-width: 360px) {
+  .jobContainer .job {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10px; }
+  .wrapperLetter {
+    width: 90%; }
+  address button.emailButton {
+    font-size: 16px;
+    text-align: center; } }
+
 main {
   font-family: "Roboto Mono", monospace;
   margin-top: 100px; }
@@ -229,6 +262,8 @@ main {
   main .coverLetter h3 {
     font-size: 26px; }
   main .coverLetter p {
+    font-size: 18px; }
+  main ul .skillsList {
     font-size: 18px; }
   main span {
     color: #2e66eb;
