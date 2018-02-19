@@ -3,7 +3,7 @@ const jobApp = {};
 jobApp.jobSearch = () =>{
     let search = $('input[type=search]').val();
     jobApp.getJobListing(search);
-    $("input[type=search]").html("");
+    // $("input[type=search]").val("");
 }
 
 
@@ -35,13 +35,14 @@ jobApp.getJobListing = (search) => {
 }; 
 
 jobApp.displayJobListings = jobListings => {
+    $('.jobContainer').html("");
     const job = jobListings; job.forEach(item => {
-        $(".wrapper").append(`
+        $(".jobContainer").append(`
            <div class="job">
                <h2>${item.jobtitle}</h2>
                <h3>${item.company}</h3>
                <p>${item.snippet}</p>
-               <button class="jobbtn">Generate Cover Letter</button>
+               <button class="jobbtn">Select this job!</button>
            </div>`);
     });
 }; 
@@ -204,38 +205,6 @@ jobApp.randomAnt5 = anton => {
 };
 
 
-
-// jobApp.replaceRhyme = (query) => {
-//   $.ajax({
-//     url: `https://api.datamuse.com/words?rel_rhy=${query}`,
-//     method: "GET",
-//     dataType: "json"
-//   }).then(res => {
-//     const rhyme = res;
-//     jobApp.randomRhyme(rhyme);
-//     jobApp.randomRhyme2(rhyme);
-//   });
-// };
-
-
-
-// jobApp.randomRhyme = (rhyme) => {
-//   const index = Math.floor(Math.random() * rhyme.length);
-//   console.log(rhyme[index].word);
-//   $('.rhyme').text(rhyme[index].word);
-// };
-
-// jobApp.randomRhyme2 = rhyme => {
-//   const index = Math.floor(Math.random() * rhyme.length);
-//   console.log(rhyme[index].word);
-//   $(".rhymen").text(rhyme[index].word);
-// };
-
-
-///////
-
-
-
 jobApp.smoothScroll = () => {
 
     $('a[href^="#"]').on('click', function (event) {
@@ -251,6 +220,10 @@ jobApp.smoothScroll = () => {
     
     });
 }
+
+// jobApp.reset = () => {
+//     $("input[type=search]").reset();
+// }
 
 
 jobApp.init = () => {
@@ -294,6 +267,9 @@ $(function () {
         jobApp.replaceAntonymn5(searchIDs[4]);
     });
 
-    
+    $(".againButton button").on("click", function(e) {
+        e.preventDefault();
+        $("input[type=search]").val("");
+    });
 
 });
