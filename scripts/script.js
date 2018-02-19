@@ -60,7 +60,7 @@ jobApp.getJobTitle = x => {
 
 jobApp.jobTitleNormalize = textQuery => {
     $.ajax({
-        url: `http://api.dataatwork.org/v1/jobs/normalize?job_title=${textQuery}`,
+        url: `https://api.dataatwork.org/v1/jobs/normalize?job_title=${textQuery}`,
         dataType: "json",
         method: "GET"
     }).then(res => {
@@ -72,7 +72,7 @@ jobApp.jobTitleNormalize = textQuery => {
 
 jobApp.getJobuuid = uuid => {
     $.ajax({
-        url: `http://api.dataatwork.org/v1/jobs/${uuid}/related_skills`,
+        url: `https://api.dataatwork.org/v1/jobs/${uuid}/related_skills`,
         dataType: "json",
         method: "GET"
     }).then(res => {
