@@ -30,46 +30,45 @@
 
     <main>
 
-<!-- <a href="#bottom" id="top">
-    Click to scroll down</a> -->
+
 
         <!-- DYNAMIC JS ATTACHED TO BUTTON CONNECTED TO THIS DIV!!! -->
-        <div class="wrapper clearfix">
+        <div class="jobContainer wrapper clearfix">
             <!-- <h2 class="jobTitle"></h2>
-    <h3 class="jobCompany"></h3>
-    <p class="jobDescription"></p> -->
+            <h3 class="jobCompany"></h3>
+            <p class="jobDescription"></p> -->
         </div>
         <!-- SECTION THAT HAS QUESTIONAIRE -->
        <form action="" id="wordSkill" class="skillForm wrapperForm">
 
-           <p>What skills would best describe you?</p>
+           <p>What skills would best describe you? Pick 5!</p>
 
         <div class="wordSkillContainer">
             <!-- skills 1 -->
             <div class="wordSkillBox">
 
                 <div class="wordBox">
-                    <input type="checkbox" id="respect" name="respect" value="respect">
+                    <input type="checkbox" id="communication" name="communication" value="respect">
                
-                    <label for="respect">Communication</label>
+                    <label for="communication">Communication</label>
                 </div>
 
                 <div class="wordBox">
-                    <input type="checkbox" id="respect" name="respect" value="friendly">
+                    <input type="checkbox" id="prioritizing" name="prioritizing" value="friendly">
                 
-                    <label for="respect">Prioritizing</label>
+                    <label for="prioritizing">Prioritizing</label>
                 </div>
 
                 <div class="wordBox">
-                    <input type="checkbox" id="respect" name="respect" value="ability">
+                    <input type="checkbox" id="organization" name="organization" value="ability">
                 
-                    <label for="respect">Organization</label>
+                    <label for="organization">Organization</label>
                 </div>
 
                 <div class="wordBox">
-                    <input type="checkbox" id="respect" name="respect" value="fit">
+                    <input type="checkbox" id="technical" name="technical" value="fit">
                
-                    <label for="respect">Technical skills</label>
+                    <label for="technical">Technical skills</label>
                 </div>
             </div>
 
@@ -77,61 +76,63 @@
             <div class="wordSkillBox">
             
                 <div class="wordBox">
-                    <input type="checkbox" id="respect" name="respect" value="eager">
+                    <input type="checkbox" id="interperonal" name="interpersonal" value="eager">
             
-                    <label for="respect">Interpersonal skills</label>
+                    <label for="interpersonal">Interpersonal skills</label>
                 </div>
             
                 <div class="wordBox">
-                    <input type="checkbox" id="respect" name="respect" value="support">
+                    <input type="checkbox" id="dependability" name="dependability" value="support">
             
-                    <label for="respect">Dependability</label>
+                    <label for="dependability">Dependability</label>
                 </div>
             
                 <div class="wordBox">
-                    <input type="checkbox" id="respect" name="respect" value="confident">
+                    <input type="checkbox" id="critical" name="critical" value="confident">
             
-                    <label for="respect">Critical thinking</label>
+                    <label for="critical">Critical thinking</label>
                 </div>
             
                 <div class="wordBox">
-                    <input type="checkbox" id="respect" name="respect" value="interest">
+                    <input type="checkbox" id="solving" name="solving" value="interest">
             
-                    <label for="respect">Problem-solving abilities</label>
+                    <label for="solving">Problem-solving abilities</label>
                 </div>
             </div>
     <!-- skill 3 -->
             <div class="wordSkillBox">
             
                 <div class="wordBox">
-                    <input type="checkbox" id="respect" name="respect" value="effective">
+                    <input type="checkbox" id="initiative" name="initiative" value="effective">
             
-                    <label for="respect">Initiative</label>
+                    <label for="initiative">Initiative</label>
                 </div>
             
                 <div class="wordBox">
-                    <input type="checkbox" id="respect" name="respect" value="communicate">
+                    <input type="checkbox" id="proactive" name="proactive" value="communicate">
             
-                    <label for="respect">Proactive</label>
+                    <label for="proactive">Proactive</label>
                 </div>
             
                 <div class="wordBox">
-                    <input type="checkbox" id="respect" name="respect" value="success">
+                    <input type="checkbox" id="adaptable" name="adaptable" value="success">
             
-                    <label for="respect">Adaptable</label>
+                    <label for="adaptable">Adaptable</label>
                 </div>
             
                 <div class="wordBox">
-                    <input type="checkbox" id="respect" name="respect" value="ccordinate">
+                    <input type="checkbox" id="attentive" name="attentive" value="ccordinate">
             
-                    <label for="respect">Attentive</label>
+                    <label for="attentive">Attentive</label>
                 </div>
             </div>
         </div>
         
         <div class="submitButton">
-            <input type="submit" id="respect" name="respect" value="Submit">
-            <label for="respect"></label>         
+            <!-- <a href="#bottom" id="top"> -->
+             <input type="submit" id="submit" name="submit" value="Submit">
+            <label for="submit"></label>
+        <!-- </a> -->
         </div>
        </form>
         
@@ -139,23 +140,30 @@
         <!-- SECTION THAT HAS THE COVER LETTER -->
         <section class="cvrLetter">
             <div class="coverLetter wrapperLetter">
-                <h3>Dear
+                <h3>Hey
                     <span class="companyName">COMPANY</span> ,</h3>
                 <p>This email is in regards to my interest in applying for the
                     <span class="jobRole">POSITION</span> position recently posted through Indeed.com website.</p>
                 <p>While pursuing a degree from Soso College, I got skillzzz that would blow your mind away. I have been recognized
                     for my outstanding
                     <span class="ability"></span> to work as part of a team. It is for this reason I have
-                    <span class="antonymn"></span> in multiple team-oriented courses and projects and have consistently
-                    <span class="rhyme"></span> finished assignments as per requirements and always within the allotted time provided.</p>
+                    <span class="antony1"></span> in multiple team-oriented courses and projects and have consistently
+                    <span class="antony2"></span> finished assignments as per requirements and always within the allotted time provided.</p>
+                    <p>I also do not possess the following skills:</p>
+                    <ul class="skillsList"></ul>
                 <p>I have also been able to utilize my
-                    <span class="rhymen"></span> technical knowledge while volunteering in multiple capacities. It is with
-                    <span class="antonymn2"></span> that I have been able to gain exposure to multiple technologies, platforms, and operating
+                    <span class="antony3"></span> technical knowledge while volunteering in multiple capacities. It is with
+                    <span class="antony4"></span> that I have been able to gain exposure to multiple technologies, platforms, and operating
                     languages through the course of my perpetual quest for knowledge.</p>
                 <p>I am sure after appraisal of my resume you will see I am an individual with excellent potential.</p>
                 <p>Yours sincerely,</p>
             </div>
         </section>
+        <!-- <section>
+            <address class="wrapperLetter">
+                <a href="webmaster@example.com"><button class="emailButton">Send a copy to myself!</button></a>
+            </address>
+        </section> -->
         <section class="againButton wrapperLetter">
             <a href="#top" id="bottom"><button>Create Again!</button></a>
         </section>

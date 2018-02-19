@@ -51,12 +51,13 @@ main{
         
         .wordSkillBox{
             display: flex;
-            justify-content: center;
+           flex-direction: column;
         }
 
         .wordBox{
             display: flex;
             padding: 30px;
+            align-items: center;
         }
 
         .submitButton{
@@ -71,9 +72,11 @@ main{
         }
     
         p{
-            font-size: $bigFontSzie;
+            font-size: $bigFontSize;
             text-align: center;
             padding-top: 100px;
+            padding-left: 20px;
+            padding-right: 20px;
         }
         
         label{
@@ -108,9 +111,22 @@ main{
         font-size: 18px;
     }
 
+    ul .skillsList{
+        font-size: 18px;
+    }
+
     span{
         color: $secondColor;
         font-size: 18px;
+    }
+    // Create Email Button Style
+    .emailButton{
+        background: $secondColor;
+        color: #ffff;
+        font-size: 25px;
+        border: 1px;
+        padding: 16px 65px;
+       margin-top: 100px;
     }
     // Create Again Button Style ===
     

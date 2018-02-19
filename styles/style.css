@@ -135,6 +135,39 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 i {
   color: white; }
 
+@media (max-width: 1170px) {
+  .jobContainer .job {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10px; }
+  .wrapperLetter {
+    width: 90%; }
+  main .againButton {
+    font-size: 16px;
+    text-align: center; }
+  address button.emailButton {
+    font-size: 16px;
+    text-align: center; } }
+
+@media (max-width: 830px) {
+  h1 {
+    font-size: 40px; } }
+
+@media (max-width: 360px) {
+  .jobContainer .job {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10px; }
+  .wrapperLetter {
+    width: 90%; }
+  address button.emailButton {
+    font-size: 16px;
+    text-align: center; } }
+
 main {
   font-family: "Roboto Mono", monospace;
   margin-top: 100px; }
@@ -179,14 +212,18 @@ main {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center; }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
     main form .wordBox {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      padding: 30px; }
+      padding: 30px;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
     main form .submitButton {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -201,7 +238,9 @@ main {
     main form p {
       font-size: 40px;
       text-align: center;
-      padding-top: 100px; }
+      padding-top: 100px;
+      padding-left: 20px;
+      padding-right: 20px; }
     main form label {
       font-size: 20px;
       color: #62574e; }
@@ -224,9 +263,18 @@ main {
     font-size: 26px; }
   main .coverLetter p {
     font-size: 18px; }
+  main ul .skillsList {
+    font-size: 18px; }
   main span {
     color: #2e66eb;
     font-size: 18px; }
+  main .emailButton {
+    background: #2e66eb;
+    color: #ffff;
+    font-size: 25px;
+    border: 1px;
+    padding: 16px 65px;
+    margin-top: 100px; }
   main .againButton button {
     background: #2e66eb;
     color: #ffff;
@@ -272,7 +320,7 @@ html {
   margin: 0 auto; }
 
 .wrapperForm {
-  max-width: 1170px;
+  max-width: 880px;
   margin: 0 auto; }
 
 .wrapperLetter {
