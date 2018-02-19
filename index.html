@@ -13,7 +13,7 @@
 
 <body>
     <header>
-        <a href="#bottom" id="top"></a>
+        <a href="" id="top"></a>
         <h1>Create your worst cover letter</h1>
         <form>
             <div>
@@ -22,7 +22,7 @@
                 <input type="search" id="jobsearch" name="name" placeholder="Search for a job">
             </div>
             <div>
-                <button class="showJobs">Show me jobs!</button>
+                <a href="#next"><button class="showJobs">Show me jobs!</button></a>
             </div>
         </form>
     </header>
@@ -33,7 +33,7 @@
 
 
         <!-- DYNAMIC JS ATTACHED TO BUTTON CONNECTED TO THIS DIV!!! -->
-        <div class="jobContainer wrapper clearfix">
+        <div class="jobContainer wrapper clearfix" id="next">
             <!-- <h2 class="jobTitle"></h2>
             <h3 class="jobCompany"></h3>
             <p class="jobDescription"></p> -->
@@ -138,7 +138,7 @@
         
 
         <!-- SECTION THAT HAS THE COVER LETTER -->
-        <section class="cvrLetter">
+        <section class="cvrLetter" id="cvrLetter">
             <div class="coverLetter wrapperLetter">
                 <h3>Hey
                     <span class="companyName">COMPANY</span> ,</h3>

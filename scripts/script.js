@@ -241,7 +241,8 @@ $(function () {
     });    
 
     $("div").on("click", ".jobbtn", function(e) {
-    jobApp.getJobTitle(this); 
+    jobApp.getJobTitle(this);
+    location.href="#wordSkill";
 });
 
     $("input[type=checkbox]").on("change", function(e) {
@@ -265,6 +266,7 @@ $(function () {
         jobApp.replaceAntonymn3(searchIDs[2]);
         jobApp.replaceAntonymn4(searchIDs[3]);
         jobApp.replaceAntonymn5(searchIDs[4]);
+        location.href="#cvrLetter";
     });
 
     $(".againButton button").on("click", function(e) {
