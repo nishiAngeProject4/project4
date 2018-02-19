@@ -1,7 +1,6 @@
 main{
     font-family: $baseFont;
     margin-top: 100px;
-
     .job{
         float: left;
         width: calc(33.33% - 20px);
@@ -92,6 +91,11 @@ main{
             padding: 16px 65px;
             margin-top: 100px;
         }
+
+        input[type="submit"]:hover{
+            background: $thirdColor;
+            border: 1px solid $thirdColor;
+        }
     }
     // cover letter styling =====
     .coverLetter{
@@ -111,7 +115,7 @@ main{
         font-size: 18px;
     }
 
-    ul .skillsList{
+    .skillsList li{
         font-size: 18px;
     }
 
@@ -137,6 +141,11 @@ main{
         border: 1px;
         padding: 16px 65px;
        margin-top: 100px;
+    }
+
+    button:hover{
+        background: $thirdColor;
+        border: 1px solid $thirdColor;
     }
 
 }
