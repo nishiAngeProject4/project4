@@ -251,6 +251,9 @@ main {
       border: 1px;
       padding: 16px 65px;
       margin-top: 100px; }
+    main form input[type="submit"]:hover {
+      background: #ee6f2e;
+      border: 1px solid #ee6f2e; }
   main .coverLetter {
     border: 1px solid #888888;
     padding: 50px 75px;
@@ -263,7 +266,7 @@ main {
     font-size: 26px; }
   main .coverLetter p {
     font-size: 18px; }
-  main ul .skillsList {
+  main .skillsList li {
     font-size: 18px; }
   main span {
     color: #2e66eb;
@@ -282,6 +285,9 @@ main {
     border: 1px;
     padding: 16px 65px;
     margin-top: 100px; }
+  main button:hover {
+    background: #ee6f2e;
+    border: 1px solid #ee6f2e; }
 
 header {
   font-family: "Roboto Mono", monospace; }
@@ -303,13 +309,16 @@ header {
     border: 1px solid #62574e;
     font-size: 25px;
     padding: 10px 20px; }
-  header button {
+  header .showJobs {
     background: #2e66eb;
     color: #ffff;
     font-size: 25px;
     border: 1px;
     padding: 16px 65px;
     margin-top: 60px; }
+  header .showJobs:hover {
+    background: #ee6f2e;
+    border: 1px solid #ee6f2e; }
 
 html {
   font-size: 62.5%;

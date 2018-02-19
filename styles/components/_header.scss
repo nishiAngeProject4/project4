@@ -27,13 +27,17 @@ header{
         padding: 10px 20px;
     }
 
-    button{
+    .showJobs{
         background: $secondColor;
         color: #ffff;
         font-size: 25px;
         border: 1px;
         padding: 16px 65px;
         margin-top: 60px;
+    }
+    .showJobs:hover{
+        background: $thirdColor;
+        border: 1px solid $thirdColor;
     }
 }
 
