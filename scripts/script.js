@@ -35,13 +35,14 @@ jobApp.getJobListing = (search) => {
 }; 
 
 jobApp.displayJobListings = jobListings => {
+    $('.jobContainer').html("");
     const job = jobListings; job.forEach(item => {
-        $(".wrapper").append(`
+        $(".jobContainer").append(`
            <div class="job">
                <h2>${item.jobtitle}</h2>
                <h3>${item.company}</h3>
                <p>${item.snippet}</p>
-               <button class="jobbtn">Generate Cover Letter</button>
+               <button class="jobbtn">Select this job!</button>
            </div>`);
     });
 }; 
