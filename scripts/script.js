@@ -3,7 +3,6 @@ const jobApp = {};
 jobApp.jobSearch = () =>{
     let search = $('input[type=search]').val();
     jobApp.getJobListing(search);
-    // $("input[type=search]").val("");
 }
 
 
