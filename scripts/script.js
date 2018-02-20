@@ -3,7 +3,6 @@ const jobApp = {};
 jobApp.jobSearch = () =>{
     let search = $('input[type=search]').val();
     jobApp.getJobListing(search);
-    // $("input[type=search]").val("");
 }
 
 
@@ -28,9 +27,12 @@ jobApp.getJobListing = (search) => {
     }).then(res => {
 
         if (res.totalResults === 0) {
-          alert("search again");}
+          alert("0 results found please search again");}
+        else {  
         const jobListings = res.results;
         jobApp.displayJobListings(jobListings);
+        location.href = "#next";
+        }
     });
 }; 
 
@@ -60,7 +62,7 @@ jobApp.getJobTitle = x => {
 
 jobApp.jobTitleNormalize = textQuery => {
     $.ajax({
-        url: `http://api.dataatwork.org/v1/jobs/normalize?job_title=${textQuery}`,
+        url: `https://api.dataatwork.org/v1/jobs/normalize?job_title=${textQuery}`,
         dataType: "json",
         method: "GET"
     }).then(res => {
@@ -72,7 +74,7 @@ jobApp.jobTitleNormalize = textQuery => {
 
 jobApp.getJobuuid = uuid => {
     $.ajax({
-        url: `http://api.dataatwork.org/v1/jobs/${uuid}/related_skills`,
+        url: `https://api.dataatwork.org/v1/jobs/${uuid}/related_skills`,
         dataType: "json",
         method: "GET"
     }).then(res => {
@@ -268,7 +270,10 @@ $(function () {
 
     $(".againButton button").on("click", function(e) {
         e.preventDefault();
+        $(".cvrLetter").hide();
+        $(".againButton").hide();
         $("input[type=search]").val("");
+        $('.jobContainer').html('');
     });
 
 });
