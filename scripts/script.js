@@ -105,7 +105,7 @@ jobApp.replaceAntonymn = (query) => {
   $.ajax({
     url: `https://api.datamuse.com/words?rel_ant=${query}`,
     method: "GET",
-    dataType: "json"
+    dataType: "jsonp"
   }).then(res => {
     console.log(res);
     if (res.length === 0) {
@@ -126,7 +126,7 @@ jobApp.replaceAntonymn2 = query => {
   $.ajax({
     url: `https://api.datamuse.com/words?rel_ant=${query}`,
     method: "GET",
-    dataType: "json"
+    dataType: "jsonp"
   }).then(res => {
     console.log(res);
     if (res.length === 0) {
@@ -147,7 +147,7 @@ jobApp.replaceAntonymn3 = query => {
   $.ajax({
     url: `https://api.datamuse.com/words?rel_ant=${query}`,
     method: "GET",
-    dataType: "json"
+    dataType: "jsonp"
   }).then(res => {
     console.log(res);
     if (res.length === 0) {
@@ -168,7 +168,7 @@ jobApp.replaceAntonymn4 = query => {
   $.ajax({
     url: `https://api.datamuse.com/words?rel_ant=${query}`,
     method: "GET",
-    dataType: "json"
+    dataType: "jsonp"
   }).then(res => {
     console.log(res);
     if (res.length === 0) {
@@ -190,7 +190,7 @@ jobApp.replaceAntonymn5 = query => {
   $.ajax({
     url: `https://api.datamuse.com/words?rel_ant=${query}`,
     method: "GET",
-    dataType: "json"
+    dataType: "jsonp"
   }).then(res => {
     console.log(res);
     if (res.length === 0) {
