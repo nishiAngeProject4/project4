@@ -27,9 +27,12 @@ jobApp.getJobListing = (search) => {
     }).then(res => {
 
         if (res.totalResults === 0) {
-          alert("search again");}
+          alert("0 results found please search again");}
+        else {  
         const jobListings = res.results;
         jobApp.displayJobListings(jobListings);
+        location.href = "#next";
+        }
     });
 }; 
 
@@ -267,7 +270,10 @@ $(function () {
 
     $(".againButton button").on("click", function(e) {
         e.preventDefault();
+        $(".cvrLetter").hide();
+        $(".againButton").hide();
         $("input[type=search]").val("");
+        $('.jobContainer').html('');
     });
 
 });
