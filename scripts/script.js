@@ -1,11 +1,13 @@
 const jobApp = {};
 
+//search for job listing from search field
 jobApp.jobSearch = () =>{
     let search = $('input[type=search]').val();
     jobApp.getJobListing(search);
 }
 
 
+//indeed api. searches indeed for job
 jobApp.getJobListing = (search) => {
     $.ajax({
         url: "https://proxy.hackeryou.com",
@@ -35,7 +37,7 @@ jobApp.getJobListing = (search) => {
         }
     });
 }; 
-
+//display results
 jobApp.displayJobListings = jobListings => {
     $('.jobContainer').html("");
     const job = jobListings; job.forEach(item => {
@@ -44,13 +46,13 @@ jobApp.displayJobListings = jobListings => {
                <h2>${item.jobtitle}</h2>
                <h3>${item.company}</h3>
                <p>${item.snippet}</p>
-               <button class="jobbtn">Select this job!</button>
+               <button class="jobbtn">Ruin This Oppurtunity!</button>
            </div>`);
     });
 }; 
 
 
-
+//stores the title and employer
 jobApp.getJobTitle = x => {
     let indeedTitle = $(x).siblings("h2").text();
     let indeedCompany = $(x).siblings("h3").text();
@@ -60,6 +62,8 @@ jobApp.getJobTitle = x => {
 
 }; 
 
+//enters the job title to get a normalised job title which will be used to find skills associated with job
+//and gets the uuid needed
 jobApp.jobTitleNormalize = textQuery => {
     $.ajax({
         url: `https://api.dataatwork.org/v1/jobs/normalize?job_title=${textQuery}`,
@@ -72,6 +76,7 @@ jobApp.jobTitleNormalize = textQuery => {
     });
 }; 
 
+//uuid used from normalised job title to get a list of skills
 jobApp.getJobuuid = uuid => {
     $.ajax({
         url: `https://api.dataatwork.org/v1/jobs/${uuid}/related_skills`,
@@ -87,19 +92,16 @@ jobApp.getJobuuid = uuid => {
     });
 }; 
 
+//display job title and employer in cover letter
 jobApp.coverLetterIntro = (x,y) => {
     $(".companyName").text(x);
     $(".jobRole").text(y);    
 };
 
 
-jobApp.randomAbility = optionsArray => {
-  const index = Math.floor(Math.random() * optionsArray.length);
-  console.log(optionsArray[index]);
-  return optionsArray[index];
-};
 
-//////////
+
+////////// collects values from the checkboxes below and uses that value to search for a list of antonyms
 
 jobApp.replaceAntonymn = (query) => {
   $.ajax({
@@ -116,6 +118,7 @@ jobApp.replaceAntonymn = (query) => {
   });
 };
 
+//selects a random antonym from the list
 jobApp.randomAnt = (anton) => {
   const index = Math.floor(Math.random() * anton.length);
   console.log(anton[index].word);
@@ -242,13 +245,16 @@ $(function () {
     location.href="#wordSkill";
 });
 
+
+   //incase user selects more than 5 skills
+
     $("input[type=checkbox]").on("change", function(e) {
     if ($("input[type=checkbox]:checked").length > 5) {
         $(this).prop("checked", false);
         alert("Please only select 5 skills");
     }
     });
-
+//collects values from the checkboxes
     
     $('form').on("submit", function(e){
         e.preventDefault();
